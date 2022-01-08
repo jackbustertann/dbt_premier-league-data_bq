@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: stg_fixtures
+    description: One record per fixture
+    columns:
+      - name: fixture_id
+        description: Primary key
+        tests:
+          - unique
+          - not_null
