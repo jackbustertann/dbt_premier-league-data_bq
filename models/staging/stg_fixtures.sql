@@ -9,4 +9,5 @@ SELECT
 ,   goals_home
 ,   goals_away
 
-FROM `premier-league-data-337116.pl_dev.src_fixtures` 
+--FROM `premier-league-data-337116.pl_dev.src_fixtures` 
+FROM {{ source('pl_prod', 'src_fixtures') }}
