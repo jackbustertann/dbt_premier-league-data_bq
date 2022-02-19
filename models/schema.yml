@@ -9,19 +9,3 @@ models:
         tests:
           - unique
           - not_null
-
-sources:
-  - name: pl_prod
-    freshness: 
-      warn_after: {count: 24, period: hour}
-      #error_after: {count: 24, period: hour}
-    loaded_at_field: updated_at
-    tables:
-      - name: src_fixtures
-        description: Source table for fixtures
-        columns:
-          - name: fixture_id
-            description: Primary key
-            tests:
-              - unique
-              - not_null
